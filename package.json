@@ -5,7 +5,8 @@
 	"typings": "dist/index.d.ts",
 	"description": "A wrapper for the FloWrestling API",
 	"scripts": {
-		"build": "rm -rf dist & tsc -p ."
+		"build": "rm -rf dist & tsc -p .",
+		"prepare": "npm run build"
 	},
 	"repository": {
 		"type": "git",
