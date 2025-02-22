@@ -5,8 +5,7 @@
 	"typings": "dist/FloAPI.d.ts",
 	"description": "A wrapper for the FloWrestling API",
 	"scripts": {
-		"build": "rm -rf dist & tsc -p .",
-    "deploy": "npm publish --access public"
+		"build": "rm -rf dist & tsc -p ."
 	},
 	"repository": {
 		"type": "git",
