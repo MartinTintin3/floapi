@@ -1,8 +1,8 @@
 {
 	"name": "floapi",
 	"version": "0.0.1",
-	"main": "dist/FloAPI.js",
-	"typings": "dist/FloAPI.d.ts",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
 	"description": "A wrapper for the FloWrestling API",
 	"scripts": {
 		"build": "rm -rf dist & tsc -p ."
