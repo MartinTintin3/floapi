@@ -1,15 +1,15 @@
-import { DateTime, FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
 export type WeightClassAttributes = {
 	createdByUserId: number;
-	createdDateTimeUtc: DateTime;
+	createdDateTimeUtc: string;
 	divisionId: UUID;
 	eventId: UUID;
 	maxWeight: number;
 	maxWrestlerCount: number | null;
 	minWeight: number;
 	modifiedByUserId: number;
-	modifiedDateTimeUtc: DateTime;
+	modifiedDateTimeUtc: string;
 	name: string;
 	sequence: number;
 }

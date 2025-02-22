@@ -1,13 +1,13 @@
-import { DateTime, FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
 export type BracketPlacementAttributes = {
 	boutId: UUID;
 	boutPoolId: UUID;
 	createdByUserId: string;
-	createDateTimeUtc: DateTime;
+	createDateTimeUtc: string;
 	eventId: UUID;
 	modifiedByUserId: string;
-	modifiedDateTimeUtc: DateTime;
+	modifiedDateTimeUtc: string;
 	placement: number;
 	placementDisplay: string;
 	winnerPoints: number;

@@ -1,5 +1,5 @@
 import { GradeObject } from "./grade";
-import { DateTime, FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 import { LocationObject } from "./location";
 
 export type WrestlerAttributes = {
@@ -14,9 +14,9 @@ export type WrestlerAttributes = {
 	grade: GradeObject;
 	gradeId: UUID | null;
 	createdByUserId: string;
-	createdDateTimeUtc: DateTime;
+	createdDateTimeUtc: string;
 	modifiedByUserId: string | null;
-	modifiedDateTimeUtc: DateTime;
+	modifiedDateTimeUtc: string;
 	dateOfBirth: string | null;
 	gender: string;
 	isSkinChecked: boolean;

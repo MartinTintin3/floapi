@@ -1,8 +1,8 @@
-import { BaseResponse, BoutsResponse, NodeResult, SearchResultPerson, SearchResultPersonUseOfp, SearchResults, WrestlersResponse } from "./types/responses";
-import { BoutsIncludeString, FloObject, FloObjectTypeString, UUID, WrestlersIncludeString } from "./types/types";
-import { Relationship, RelationshipToBout, RelationshipToWrestler } from "./types/relationships";
-import { WrestlerObject } from "./types/objects/wrestler";
-import { BoutObject } from "./types/objects/bout";
+import { BaseResponse, BoutsResponse, NodeResult, SearchResultPerson, SearchResultPersonUseOfp, SearchResults, WrestlersResponse } from "./types/floarena-api/responses";
+import { BoutsIncludeString, FloObject, FloObjectTypeString, UUID, WrestlersIncludeString } from "./types/floarena-api/types";
+import { Relationship, RelationshipToBout, RelationshipToWrestler } from "./types/floarena-api/relationships";
+import { WrestlerObject } from "./types/floarena-api/objects/wrestler";
+import { BoutObject } from "./types/floarena-api/objects/bout";
 export type FetchConfig = {
     pageSize: number;
     pageOffset: number;

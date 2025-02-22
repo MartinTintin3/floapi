@@ -1,10 +1,10 @@
-import { DateTime, FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 import { GradeObject } from "./grade";
 
 export type DivisionAttributes = {
 	abbreviation: string | null;
 	createdByUserId: string;
-	createdDateTimeUtc: DateTime;
+	createdDateTimeUtc: string;
 	displayBlackWhite: boolean;
 	divisionGroupingType: "grade";
 	divisionProfileId: UUID;
@@ -19,15 +19,15 @@ export type DivisionAttributes = {
 	maxPerBracket: number;
 	measurementUnit: "lbs";
 	modifiedByUserId: string;
-	modifiedDateTimeUtc: DateTime;
+	modifiedDateTimeUtc:string;
 	name: string;
 	oldestGrade: GradeObject;
 	oldestGradeId: UUID;
 	publishBrackets: boolean;
 	sequence: number;
 	teamScoreGroupId: UUID;
-	weighInEndDateTime: DateTime;
-	weighInStartDateTime: DateTime;
+	weighInEndDateTime: string;
+	weighInStartDateTime: string;
 	youngestGrade: GradeObject;
 	youngestGradeId: UUID;
 }

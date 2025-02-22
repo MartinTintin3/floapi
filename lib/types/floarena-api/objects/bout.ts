@@ -1,4 +1,4 @@
-import { FloBaseObject, DateTime, ObjectIdentifier, UUID } from "../types";
+import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
 export type BoutAttributes = {
 	eventId: UUID;
@@ -8,9 +8,9 @@ export type BoutAttributes = {
 	boutNumber: string;
 	boutPoolId: UUID;
 	bracketSize: number;
-	createdDateTimeUtc: DateTime;
-	endDateTime: DateTime;
-	goDateTime: DateTime;
+	createdDateTimeUtc: string;
+	endDateTime: string;
+	goDateTime: string;
 	isBottomBye: boolean;
 	isConfirmed: boolean;
 	isConsolation: boolean;
@@ -23,7 +23,7 @@ export type BoutAttributes = {
 	mat: UUID | null;
 	matchQueueId: UUID;
 	maxPlace: number;
-	modifiedDateTimeUtc: DateTime;
+	modifiedDateTimeUtc: string;
 	naturalRound: number;
 	redWrestler: UUID;
 	result: string;

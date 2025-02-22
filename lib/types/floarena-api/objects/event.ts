@@ -1,13 +1,13 @@
-import { FloBaseObject, DateTime, ObjectIdentifier, UUID } from "../types";
+import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 import { LocationObject } from "./location";
 
 export type EventAttributes = {
 	apiHost: string;
 	city: string;
 	clonedFromEventId: UUID | null;
-	createdDateTimeUtc: DateTime;
+	createdDateTimeUtc: string;
 	description: string;
-	endDateTime: DateTime;
+	endDateTime: string;
 	firebasehost: string;
 	isArenaSync: boolean;
 	isDual: boolean;
@@ -20,14 +20,14 @@ export type EventAttributes = {
 	location: LocationObject;
 	locationName: string;
 	maxWrestlerCount: number | null;
-	modifiedDateTimeUtc: DateTime;
+	modifiedDateTimeUtc: string;
 	name: string;
 	participantAlias: string;
 	participantAliasPlural: string;
 	registrationReceiptMsg: string;
-	resultsEmailsSentDateTime: DateTime | null;
+	resultsEmailsSentDateTime: string | null;
 	sendAnnouncerChatsToAdmins: boolean;
-	startDateTime: DateTime;
+	startDateTime: string;
 	state: string;
 	stripeAccountId: string;
 	timeZone: string;

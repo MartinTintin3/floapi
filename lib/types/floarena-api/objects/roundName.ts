@@ -1,10 +1,10 @@
-import { FloBaseObject, DateTime, ObjectIdentifier, UUID } from "../types";
+import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
 export type RoundNameAttributes = {
 	createdByUserId: string;
-	createdDateTimeUtc: DateTime;
+	createdDateTimeUtc: string;
 	modifiedByUserId: string | null;
-	modifiedDateTimeUtc: DateTime | null;
+	modifiedDateTimeUtc: string | null;
 	eventId: UUID;
 	systemName: string;
 	displayName: string;

@@ -1,0 +1,3 @@
+export type FloObjectTypeString = "bout" | "division" | "event" | "grade" | "roundName" | "team" | "weightClass" | "wrestler" | "bracketPlacement";
+export const BoutsIncludeAll = ["bottomWrestler", "bottomWrestler.team", "topWrestler.team", "weightClass", "topWrestler.division", "bottomWrestler.division", "event", "roundName"] as const;
+export const WrestlersIncludeAll = ["bracketPlacements.weightClass", "bracketPlacements", "division", "event", "weightClass", "team"] as const;

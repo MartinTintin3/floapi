@@ -1,7 +1,8 @@
+import { Nothing } from "../..";
 import { BoutObject } from "./objects/bout";
 import { WrestlerObject } from "./objects/wrestler";
 import { Relationship, RelationshipToBout, RelationshipToWrestler } from "./relationships";
-import { DateTime, FloObject, Nothing, UUID } from "./types";
+import { FloObject, UUID } from "./types";
 
 // Base response
 export type BaseResponse<O extends FloObject, R extends Relationship | void, I = Exclude<FloObject, O> | void> = {
@@ -78,8 +79,8 @@ export type SearchResultPerson = {
 		copied: boolean;
 		duplicated: boolean;
 		file_type: string;
-		created_at: DateTime;
-		modified_at: DateTime;
+		created_at: string;
+		modified_at: string;
 	};
 	node: {
 		id: number;
