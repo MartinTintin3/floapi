@@ -1,0 +1,21 @@
+{
+	"name": "floapi",
+	"version": "1.0.1",
+	"main": "dist/FloAPI.js",
+	"typings": "dist/FloAPI.d.ts",
+	"description": "A wrapper for the FloWrestling API",
+	"scripts": {
+		"build": "rm -rf dist & tsc -p .",
+    "deploy": "npm publish --access public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MartinTintin3/floapi.git"
+	},
+	"files": [
+		"dist"
+	],
+	"devDependencies": {
+		"typescript": "^5.7.3"
+	}
+}

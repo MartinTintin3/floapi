@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "lib",
+		"declaration": true,
+		"emitDeclarationOnly": false,
+		"declarationMap": true,
+		"sourceMap": true,
+		"target": "es2015",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"strict": true,
+	},
+	"include": ["lib/**/*"],
+	"exclude": ["node_modules"]
+}
