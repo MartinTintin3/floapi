@@ -1,15 +1,21 @@
+import axios from "axios";
+
 export function fetchWithProgress<T>(url: string, onProgress?: (progress: number) => void): Promise<T> {
 	return new Promise((resolve, reject) => {
-		const xhr = new XMLHttpRequest();
-		xhr.open("GET", url, true);
-		xhr.addEventListener("progress", e => {
-			if (e.lengthComputable && onProgress) onProgress((e.loaded / e.total) * 100);
-		});
-		xhr.addEventListener("load", () => {
+		axios.get<T>(url, {
+			onDownloadProgress: e => {
+				if (e.lengthComputable && e.total && onProgress) {
+					onProgress((e.loaded / e.total) * 100);
+				}
+			},
+		}).then(res => {
 			if (onProgress) onProgress(100);
-			resolve(JSON.parse(xhr.responseText) as T);
+			if (res.status !== 200) {
+				reject(new Error(`Request failed with status code ${res.status}`));
+				return;
+			} else {
+				resolve(res.data);
+			}
 		});
-		xhr.addEventListener("error", reject);
-		xhr.send();
 	});
 }
