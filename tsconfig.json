@@ -10,6 +10,7 @@
 		"module": "ESNext",
 		"moduleResolution": "node",
 		"strict": true,
+		"noImplicitAny": true,
 	},
 	"include": ["lib/**/*"],
 	"exclude": ["node_modules"]

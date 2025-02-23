@@ -1,4 +1,4 @@
-import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import type { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
 export type RoundNameAttributes = {
 	createdByUserId: string;

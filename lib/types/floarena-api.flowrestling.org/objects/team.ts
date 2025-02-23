@@ -1,5 +1,5 @@
-import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-import { LocationObject } from "./location";
+import type { FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import type { LocationObject } from "./location";
 
 export type TeamAttributes = {
 	abbreviation: string | null;

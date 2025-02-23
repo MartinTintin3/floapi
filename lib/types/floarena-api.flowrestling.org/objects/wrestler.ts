@@ -1,6 +1,6 @@
-import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-import { GradeObject } from "./grade";
-import { LocationObject } from "./location";
+import type { FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import type { GradeObject } from "./grade";
+import type { LocationObject } from "./location";
 
 export type WrestlerAttributes = {
 	identityPersonId: UUID;

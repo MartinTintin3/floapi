@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 export type SearchResultsTyped<O extends boolean> = O extends true ? SearchResults<SearchResultPersonUseOfp> : SearchResults<SearchResultPerson>;
 
 export type NodeResult = {
@@ -118,7 +119,7 @@ export type SearchResultPersonUseOfp = {
 }
 
 export type SearchResults<D extends SearchResultPerson | SearchResultPersonUseOfp> = {
-	data: Array<D> | null;
+	data: D[] | null;
 	meta: {
 		duration: number;
 		limit: number;
@@ -137,9 +138,7 @@ export type SearchResults<D extends SearchResultPerson | SearchResultPersonUseOf
 					ids: {
 						person: string[];
 					},
-					sortSeq: {
-						[personId: string]: number;
-					}
+					sortSeq: Record<string, number>
 				}
 			}
 		]

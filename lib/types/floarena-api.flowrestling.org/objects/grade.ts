@@ -1,4 +1,4 @@
-import { FloBaseObject, ObjectIdentifier } from "../types";
+import type { FloBaseObject, ObjectIdentifier } from "../types";
 
 export type GradeAttributes = {
 	name: string;

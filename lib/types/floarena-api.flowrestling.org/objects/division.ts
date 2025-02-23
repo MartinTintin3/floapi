@@ -1,5 +1,5 @@
-import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-import { GradeObject } from "./grade";
+import type { FloBaseObject, ObjectIdentifier, UUID } from "../types";
+import type { GradeObject } from "./grade";
 
 export type DivisionAttributes = {
 	abbreviation: string | null;
