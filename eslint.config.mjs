@@ -11,6 +11,9 @@ export default [
 			globals: globals.browser,
 			parserOptions: {
 				projectService: true,
+				projectFolderIgnoreList: [
+					"**dist**",
+				],
 			},
 		},
 	},
@@ -30,6 +33,6 @@ export default [
 				allowNumber: true,
 			}]
 		},
-		ignores: ["dist/**"]
+		ignores: ["dist/**"],
 	}
 ];
