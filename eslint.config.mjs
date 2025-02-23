@@ -26,6 +26,9 @@ export default [
 			"no-case-declarations": "off",
 			"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 			"@typescript-eslint/prefer-readonly-parameter-types": "off",
+			"@typescript-eslint/restrict-template-expressions": [{
+				allowNumber: true,
+			}]
 		},
 		ignores: ["dist/**"]
 	}
