@@ -1,6 +1,6 @@
 import { FloObjectTypeString } from "./consts";
-import { Relationships } from "./relationships";
-import { Responses } from "./responses";
+import * as Relationships from "./relationships";
+import * as Responses from "./responses";
 import { FloObject, UUID, WrestlersIncludeString, BoutsIncludeString, Wrestler, Bout } from "./types";
 import { fetchWithProgress } from "../../utils";
 
