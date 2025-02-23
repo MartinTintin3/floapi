@@ -15,8 +15,7 @@ export default [
 		},
 	},
 	pluginJs.configs.recommended,
-	...tseslint.configs.recommended,
-	...tseslint.configs.all,
+	...tseslint.configs.strictTypeChecked,
 	{
 		rules: {
 			"brace-style": ["error", "1tbs", { "allowSingleLine": true }],
