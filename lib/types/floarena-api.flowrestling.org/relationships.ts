@@ -8,7 +8,7 @@ import Team from "./objects/team";
 import WeightClass from "./objects/weightClass";
 import Wrestler from "./objects/wrestler";
 
-namespace Relationships {
+export namespace Relationships {
 	export type Generic = BracketPlacement | TopWrestler | BottomWrestler | WeightClass | Team | RoundName | Grade | Division | Event | Bout;
 
 	export type ToWrestler = Exclude<Generic, TopWrestler | BottomWrestler>;
@@ -28,5 +28,3 @@ namespace Relationships {
 	export type AllToBout = TopWrestler & BottomWrestler & WeightClass & RoundName & Event;
 	export type AllToWrestler = Team & Division & Event & WeightClass & BracketPlacement;
 }
-
-export default Relationships;

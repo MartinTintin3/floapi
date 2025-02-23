@@ -1,7 +1,6 @@
 import { FloObjectTypeString } from "./consts";
-import { NodeResult, SearchResultPerson, SearchResultPersonUseOfp, SearchResults } from "../api.flowrestling.org";
-import Relationships from "./relationships";
-import Responses from "./responses";
+import { Relationships } from "./relationships";
+import { Responses } from "./responses";
 import { FloObject, UUID, WrestlersIncludeString, BoutsIncludeString, Wrestler, Bout } from "./types";
 import { fetchWithProgress } from "../../utils";
 
@@ -29,10 +28,6 @@ export function fetchWrestlersByWeightClass<R extends Relationships.ToWrestler |
 
 export function fetchBoutsByEvent<R extends Relationships.ToBout | void, I extends Exclude<FloObject, Bout.Object> | void>(id: UUID, config: FetchConfig, include: readonly BoutsIncludeString[] = ["bottomWrestler.team", "topWrestler.team", "weightClass", "topWrestler.division", "bottomWrestler.division", "roundName"], extra?: string): Promise<Responses.Bouts<R, I>> {
 	return fetchWithProgressTyped<Bout.Object, R, I>(`https://floarena-api.flowrestling.org/bouts/?eventId=${id}&page[size]=${config.pageSize}&page[offset]=${config.pageOffset}&hasResult=true` + (include.length ? `&include=${include.join(",")}` : "") + (extra ?? ""), config.onProgress);
-}
-
-export function fetchFromNode(node: number, onProgress?: (progress: number) => void) {
-	return fetchWithProgress<NodeResult>(`https://api.flowrestling.org/api/collections/from-node/${node}`, onProgress);
 }
 
 export function findIncludedObjectById<T extends FloObject>(id: UUID, type: FloObjectTypeString, res: Responses.Base<FloObject, Relationships.Generic | void, FloObject>) {
