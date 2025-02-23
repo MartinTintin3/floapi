@@ -1,12 +1,12 @@
-import { Identifier as BoutIdentifier } from "./objects/bout";
-import { Identifier as BracketPlacementIdentifier } from "./objects/bracketPlacement";
-import { Identifier as DivisionIdentifier } from "./objects/division";
-import { Identifier as EventIdentifier } from "./objects/event";
-import { Identifier as GradeIdentifier } from "./objects/grade";
-import { Identifier as RoundNameIdentifier } from "./objects/roundName";
-import { Identifier as TeamIdentifier } from "./objects/team";
-import { Identifier as WeightClassIdentifier } from "./objects/weightClass";
-import { Identifier as WrestlerIdentifier } from "./objects/wrestler";
+import { BoutIdentifier } from "./objects/bout";
+import { BracketPlacementIdentifier } from "./objects/bracketPlacement";
+import { DivisionIdentifier } from "./objects/division";
+import { EventIdentifier } from "./objects/event";
+import { GradeIdentifier } from "./objects/grade";
+import { RoundNameIdentifier } from "./objects/roundName";
+import { TeamIdentifier } from "./objects/team";
+import { WeightClassIdentifier } from "./objects/weightClass";
+import { WrestlerIdentifier } from "./objects/wrestler";
 
 export type Generic = BracketPlacement | TopWrestler | BottomWrestler | WeightClass | Team | RoundName | Grade | Division | Event | Bout;
 

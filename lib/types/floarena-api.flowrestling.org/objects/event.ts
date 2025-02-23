@@ -1,7 +1,7 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-import * as Location from "./location";
+import { LocationObject } from "./location";
 
-export type Attributes = {
+export type EventAttributes = {
 	apiHost: string;
 	city: string;
 	clonedFromEventId: UUID | null;
@@ -17,7 +17,7 @@ export type Attributes = {
 	isSetupComplete: boolean;
 	isTestEvent: boolean;
 	isVisible: boolean;
-	location: Location.Object;
+	location: LocationObject;
 	locationName: string;
 	maxWrestlerCount: number | null;
 	modifiedDateTimeUtc: string;
@@ -34,8 +34,8 @@ export type Attributes = {
 	websiteUrl: string;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type EventIdentifier = ObjectIdentifier & {
 	type: "event";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type EventObject = FloBaseObject<EventIdentifier, EventAttributes>;

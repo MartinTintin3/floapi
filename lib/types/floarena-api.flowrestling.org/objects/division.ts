@@ -1,7 +1,7 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-import * as Grade from "./grade";
+import { GradeObject } from "./grade";
 
-export type Attributes = {
+export type DivisionAttributes = {
 	abbreviation: string | null;
 	createdByUserId: string;
 	createdDateTimeUtc: string;
@@ -21,19 +21,19 @@ export type Attributes = {
 	modifiedByUserId: string;
 	modifiedDateTimeUtc:string;
 	name: string;
-	oldestGrade: Grade.Object;
+	oldestGrade: GradeObject;
 	oldestGradeId: UUID;
 	publishBrackets: boolean;
 	sequence: number;
 	teamScoreGroupId: UUID;
 	weighInEndDateTime: string;
 	weighInStartDateTime: string;
-	youngestGrade: Grade.Object;
+	youngestGrade: GradeObject;
 	youngestGradeId: UUID;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type DivisionIdentifier = ObjectIdentifier & {
 	type: "division";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type DivisionObject = FloBaseObject<DivisionIdentifier, DivisionAttributes>;

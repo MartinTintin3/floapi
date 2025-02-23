@@ -1,6 +1,6 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
-export type Attributes = {
+export type RoundNameAttributes = {
 	createdByUserId: string;
 	createdDateTimeUtc: string;
 	modifiedByUserId: string | null;
@@ -12,8 +12,8 @@ export type Attributes = {
 	visibility: number;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type RoundNameIdentifier = ObjectIdentifier & {
 	type: "roundName";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type RoundNameObject = FloBaseObject<RoundNameIdentifier, RoundNameAttributes>;

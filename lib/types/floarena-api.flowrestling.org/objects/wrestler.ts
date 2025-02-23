@@ -1,8 +1,8 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-import * as Grade from "./grade";
-import * as Location from "./location";
+import { GradeObject } from "./grade";
+import { LocationObject } from "./location";
 
-export type Attributes = {
+export type WrestlerAttributes = {
 	identityPersonId: UUID;
 	city: string;
 	divisionId: UUID;
@@ -11,7 +11,7 @@ export type Attributes = {
 	firstName: string;
 	fullName: string;
 	lastName: string;
-	grade: Grade.Object;
+	grade: GradeObject;
 	gradeId: UUID | null;
 	createdByUserId: string;
 	createdDateTimeUtc: string;
@@ -22,7 +22,7 @@ export type Attributes = {
 	isSkinChecked: boolean;
 	isTeamScorer: boolean;
 	isWeighInOk: boolean;
-	location: Location.Object;
+	location: LocationObject;
 	nickname: string | null;
 	state: string;
 	teamId: UUID;
@@ -31,8 +31,8 @@ export type Attributes = {
 	zipCode: string | null;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type WrestlerIdentifier = ObjectIdentifier & {
 	type: "wrestler";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type WrestlerObject = FloBaseObject<WrestlerIdentifier, WrestlerAttributes>;

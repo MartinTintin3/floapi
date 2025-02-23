@@ -1,6 +1,6 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
-export type Attributes = {
+export type WeightClassAttributes = {
 	createdByUserId: number;
 	createdDateTimeUtc: string;
 	divisionId: UUID;
@@ -14,8 +14,8 @@ export type Attributes = {
 	sequence: number;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type WeightClassIdentifier = ObjectIdentifier & {
 	type: "weightClass";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type WeightClassObject = FloBaseObject<WeightClassIdentifier, WeightClassAttributes>;

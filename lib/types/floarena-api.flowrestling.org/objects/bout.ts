@@ -1,5 +1,6 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-export type Attributes = {
+
+export type BoutAttributes = {
 	eventId: UUID;
 	dualId: UUID | null;
 	bottomWrestlerId: UUID;
@@ -41,8 +42,8 @@ export type Attributes = {
 	winnerWrestlerId: UUID;
 };
 
-export type Identifier = ObjectIdentifier & {
+export type BoutIdentifier = ObjectIdentifier & {
 	type: "bout";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type BoutObject = FloBaseObject<BoutIdentifier, BoutAttributes>;

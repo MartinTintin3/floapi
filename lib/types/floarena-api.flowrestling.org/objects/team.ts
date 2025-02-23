@@ -1,14 +1,14 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
-import * as Location from "./location";
+import { LocationObject } from "./location";
 
-export type Attributes = {
+export type TeamAttributes = {
 	abbreviation: string | null;
 	city: string | null;
 	createdByUserId: number;
 	createdDateTimeUtc: string;
 	eventId: UUID;
 	identityTeamId: UUID | null;
-	location: Location.Object;
+	location: LocationObject;
 	modifiedByUserId: number | null;
 	modifiedDateTimeUtc: string | null;
 	name: string;
@@ -17,8 +17,8 @@ export type Attributes = {
 	zipCode: string | null;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type TeamIdentifier = ObjectIdentifier & {
 	type: "team";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type TeamObject = FloBaseObject<TeamIdentifier, TeamAttributes>;

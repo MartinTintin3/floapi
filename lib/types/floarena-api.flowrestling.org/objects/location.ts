@@ -1,6 +1,6 @@
 import { UUID } from "../types";
 
-export type Object = {
+export type LocationObject = {
 	address: string | null;
 	city: string | null;
 	country: string | null;

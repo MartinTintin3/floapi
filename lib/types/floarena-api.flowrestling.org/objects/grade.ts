@@ -1,13 +1,13 @@
 import { FloBaseObject, ObjectIdentifier } from "../types";
 
-export type Attributes = {
+export type GradeAttributes = {
 	name: string;
 	numericValue: number;
 	sequence: number;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type GradeIdentifier = ObjectIdentifier & {
 	type: "grade";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type GradeObject = FloBaseObject<GradeIdentifier, GradeAttributes>;

@@ -1,6 +1,6 @@
 import { FloBaseObject, ObjectIdentifier, UUID } from "../types";
 
-export type Attributes = {
+export type BracketPlacementAttributes = {
 	boutId: UUID;
 	boutPoolId: UUID;
 	createdByUserId: string;
@@ -14,8 +14,8 @@ export type Attributes = {
 	wrestlerId: UUID;
 }
 
-export type Identifier = ObjectIdentifier & {
+export type BracketPlacementIdentifier = ObjectIdentifier & {
 	type: "bracketPlacement";
 }
 
-export type Object = FloBaseObject<Identifier, Attributes>;
+export type BracketPlacementObject = FloBaseObject<BracketPlacementIdentifier, BracketPlacementAttributes>;

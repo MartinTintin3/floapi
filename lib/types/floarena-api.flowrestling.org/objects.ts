@@ -1,13 +1,14 @@
-import * as Bout from "./objects/bout";
-import * as Bracket from "./objects/bracketPlacement";
-import * as Division from "./objects/division";
-import * as Event from "./objects/event";
-import * as Grade  from "./objects/grade";
-import * as RoundName  from "./objects/roundName";
-import * as Team from "./objects/team";
-import * as WeightClass  from "./objects/weightClass";
-import * as Wrestler  from "./objects/wrestler";
+import { BracketPlacementObject } from "./objects/bracketPlacement";
+import { BoutObject, DivisionObject, EventObject, GradeObject, RoundNameObject, TeamObject, WeightClassObject, WrestlerObject } from "./types";
 
-export { Bout, Bracket, Division, Event, Grade, RoundName, Team, WeightClass, Wrestler };
+export * from "./objects/bout";
+export * from "./objects/bracketPlacement";
+export * from "./objects/division";
+export * from "./objects/event";
+export * from "./objects/grade";
+export * from "./objects/roundName";
+export * from "./objects/team";
+export * from "./objects/weightClass";
+export * from "./objects/wrestler";
 
-export type FloObject = Bout.Object | Division.Object | Event.Object | Grade.Object | RoundName.Object | Team.Object | WeightClass.Object | Wrestler.Object | Bracket.Object;
+export type FloObject = BoutObject | DivisionObject | EventObject | GradeObject | RoundNameObject | TeamObject | WeightClassObject | WrestlerObject | BracketPlacementObject;
