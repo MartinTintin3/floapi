@@ -4,6 +4,24 @@
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
 	"description": "A wrapper for the FloWrestling API",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./api.flowrestling.org": {
+			"types": "./dist/types/api.flowrestling.org/index.d.ts",
+			"default": "./dist/types/api.flowrestling.org/index.js"
+		},
+		"./arena.flowrestling.org": {
+			"types": "./dist/types/arena.flowrestling.org/index.d.ts",
+			"default": "./dist/types/arena.flowrestling.org/index.js"
+		},
+		"./floarena-api.flowrestling.org": {
+			"types": "./dist/types/floarena-api.flowrestling.org/index.d.ts",
+			"default": "./dist/types/floarena-api.flowrestling.org/index.js"
+		}
+	},
 	"scripts": {
 		"build": "rm -rf dist & tsc -p .",
 		"prepare": "npm run build"
