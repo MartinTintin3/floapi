@@ -5,8 +5,19 @@ import tseslint from "typescript-eslint";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {files: ["**/*.{js,mjs,cjs,ts}"]},
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+	{files: ["**/*.{js,mjs,cjs,ts}"]},
+	{languageOptions: { globals: globals.browser }},
+	pluginJs.configs.recommended,
+	...tseslint.configs.recommended,
+	{
+		rules: {
+			"brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+			"semi": ["error", "always"],
+			"quotes": ["error", "double"],
+			"indent": ["error", "tab", { "SwitchCase": 1 }],
+			"no-trailing-spaces": "error",
+			"no-case-declarations": "off"
+		},
+		ignores: ["dist/**"]
+	}
 ];
