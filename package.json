@@ -24,7 +24,7 @@
 	},
 	"scripts": {
 		"build": "rm -rf dist & tsc -p . && tsc-alias -p tsconfig.json",
-		"prepare": "npm run build"
+		"prepare": "pnpm run build"
 	},
 	"repository": {
 		"type": "git",
