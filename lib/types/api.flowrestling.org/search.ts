@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 export type SearchResultsTyped<O extends boolean> = O extends true ? SearchResults<SearchResultPersonUseOfp> : SearchResults<SearchResultPerson>;
 
 export type NodeResult = {

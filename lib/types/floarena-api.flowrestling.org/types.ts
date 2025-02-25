@@ -1,8 +1,8 @@
-import { BoutsIncludeAll, FloObjectTypeString, WrestlersIncludeAll } from "./consts";
+import type { BoutsIncludeAll, FloObjectTypeString, WrestlersIncludeAll } from "./consts";
 
-export * as Responses from "./responses";
-export * as Relationships from "./relationships";
-export * from "./objects";
+export type * as Responses from "./responses";
+export type * as Relationships from "./relationships";
+export type * from "./objects";
 
 export type UUID = string;
 export type ObjectIdentifier = {
