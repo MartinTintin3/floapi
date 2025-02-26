@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function fetchWithProgress<T>(url: string, onProgress?: (progress: number) => void): Promise<T> {
 	return new Promise((resolve, reject) => {
-		axios.get<T>(url, {
+		void axios.get<T>(url, {
 			onDownloadProgress: e => {
 				if (e.lengthComputable && e.total && onProgress) {
 					onProgress((e.loaded / e.total) * 100);
